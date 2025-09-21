@@ -34,11 +34,11 @@ const Header = () => {
             </div>
             
             {/* Indian Flag Colors */}
-            <div className="w-12 h-8 rounded-md overflow-hidden border border-primary-foreground/20">
+            {/* <div className="w-12 h-8 rounded-md overflow-hidden border border-primary-foreground/20">
               <div className="h-1/3 bg-accent"></div>
               <div className="h-1/3 bg-background"></div>
               <div className="h-1/3 bg-primary"></div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Section - Agriculture Image & Controls */}
