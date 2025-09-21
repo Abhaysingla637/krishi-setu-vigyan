@@ -47,6 +47,27 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Agricultural status colors
+        soil: {
+          healthy: "hsl(var(--soil-healthy))",
+          warning: "hsl(var(--soil-warning))",
+          critical: "hsl(var(--soil-critical))",
+        },
+        water: {
+          abundant: "hsl(var(--water-abundant))",
+          moderate: "hsl(var(--water-moderate))",
+          scarce: "hsl(var(--water-scarce))",
+        },
+        pest: {
+          safe: "hsl(var(--pest-safe))",
+          caution: "hsl(var(--pest-caution))",
+          danger: "hsl(var(--pest-danger))",
+        },
+        market: {
+          up: "hsl(var(--market-up))",
+          stable: "hsl(var(--market-stable))",
+          down: "hsl(var(--market-down))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +78,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-earth": "var(--gradient-earth)",
+        "gradient-sky": "var(--gradient-sky)",
+        "gradient-saffron": "var(--gradient-saffron)",
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",

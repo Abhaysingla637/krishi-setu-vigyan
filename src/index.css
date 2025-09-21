@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* KrishiSetu Design System - Agricultural & Indian Cultural Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Agricultural Green Theme */
+    --background: 45 15% 97%;
+    --foreground: 160 20% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 160 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 160 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Agricultural Green */
+    --primary: 142 71% 25%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Earth Brown */
+    --secondary: 33 15% 85%;
+    --secondary-foreground: 33 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 15% 95%;
+    --muted-foreground: 160 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Saffron/Orange (Indian Flag) */
+    --accent: 33 100% 60%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 15% 90%;
+    --input: 45 15% 95%;
+    --ring: 142 71% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Agricultural Colors */
+    --soil-healthy: 33 45% 55%;
+    --soil-warning: 45 85% 55%;
+    --soil-critical: 0 75% 55%;
+    
+    --water-abundant: 195 85% 45%;
+    --water-moderate: 195 65% 55%;
+    --water-scarce: 195 35% 65%;
+    
+    --pest-safe: 142 60% 45%;
+    --pest-caution: 45 75% 50%;
+    --pest-danger: 0 70% 50%;
+    
+    --market-up: 142 50% 40%;
+    --market-stable: 45 50% 50%;
+    --market-down: 0 60% 50%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 71% 25%), hsl(142 71% 35%));
+    --gradient-earth: linear-gradient(180deg, hsl(33 25% 90%), hsl(33 15% 95%));
+    --gradient-sky: linear-gradient(180deg, hsl(195 85% 85%), hsl(195 85% 95%));
+    --gradient-saffron: linear-gradient(135deg, hsl(33 100% 60%), hsl(33 100% 70%));
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +85,51 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark Agricultural Theme */
+    --background: 160 20% 8%;
+    --foreground: 45 15% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 160 20% 12%;
+    --card-foreground: 45 15% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 160 20% 12%;
+    --popover-foreground: 45 15% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 71% 35%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 33 15% 20%;
+    --secondary-foreground: 33 15% 80%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 160 20% 15%;
+    --muted-foreground: 160 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 33 100% 50%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 160 20% 25%;
+    --input: 160 20% 20%;
+    --ring: 142 71% 35%;
+
+    /* Dark mode agricultural colors */
+    --soil-healthy: 33 45% 45%;
+    --soil-warning: 45 85% 45%;
+    --soil-critical: 0 75% 45%;
+    
+    --water-abundant: 195 85% 35%;
+    --water-moderate: 195 65% 45%;
+    --water-scarce: 195 35% 55%;
+    
+    --pest-safe: 142 60% 35%;
+    --pest-caution: 45 75% 40%;
+    --pest-danger: 0 70% 40%;
+    
+    --market-up: 142 50% 30%;
+    --market-stable: 45 50% 40%;
+    --market-down: 0 60% 40%;
   }
 }
 
